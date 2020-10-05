@@ -5,7 +5,8 @@ new Vue ({
         green: 0,
         blue: 0,
         bigSquare: "rgb(0, 0, 0)",
-        colors: []
+        colors: [],
+        codeRGB: "\"Séléctionner une couleur\""
     },
     methods: {
         saveColor(){
@@ -21,6 +22,9 @@ new Vue ({
             this.red = 0
             this.green = 0
             this.blue = 0
+        },
+        rgbDisplay(rgb){
+            this.codeRGB = rgb
         }
     },
     computed: {

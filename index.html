@@ -36,9 +36,13 @@
             <h3> Nombre de carrés : {{numberColors}}</h3>
           <hr />
           <div class="col-12" v-if="numberColors">
-            <div class="prevsquare" v-for="color in colors" v-bind:style="{ 'background-color' : color }"></div>
+            <div class="prevsquare" v-for="color in colors" v-bind:style="{ 'background-color' : color }" @click="rgbDisplay(color)"></div>
           </div>
           <h3 v-else > Ajouter des couleurs !</h3>
+        </div>
+        <hr/>
+        <div class="col-12">
+          <p>Code couleur séléctionné : {{ codeRGB }}</p>
         </div>
       </div>
       <div class="col-6">
